@@ -1,17 +1,129 @@
 <html>
 <head>
-   <title>Demo Text</title>
+   <title>Pendaftaran Kriptografi Pastel</title>
+   <style>
+      body { 
+         font-family: 'Comic Sans MS', 'Segoe UI', sans-serif; 
+         margin: 0;
+         padding: 20px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         min-height: 100vh;
+         /* Background gradasi warna-warni pastel manis (Lolipop) */
+         background: linear-gradient(135deg, #ffcfe2 0%, #d6ecff 50%, #e2dcff 100%);
+         position: relative;
+         overflow: hidden;
+      }
+
+      /* Dekorasi elemen bintang-bintang lucu */
+      body::before {
+         content: "★"; position: absolute; top: 10%; left: 10%; color: #fff; font-size: 2em; opacity: 0.7; animation: float 3s ease-in-out infinite;
+      }
+      body::after {
+         content: "✦"; position: absolute; bottom: 15%; right: 12%; color: #fff; font-size: 2.5em; opacity: 0.6; animation: float 4s ease-in-out infinite;
+      }
+
+      @keyframes float {
+         0%, 100% { transform: translateY(0); }
+         50% { transform: translateY(-10px); }
+      }
+
+      .candy-box { 
+         max-width: 400px; 
+         width: 100%;
+         background: rgba(255, 255, 255, 0.9); 
+         padding: 35px; 
+         border-radius: 25px; 
+         box-shadow: 0 10px 25px rgba(255, 154, 192, 0.2); 
+         border: 4px solid #fff;
+         text-align: center;
+         box-sizing: border-box;
+      }
+
+      h2 { 
+         color: #ff76a0; 
+         margin-top: 0; 
+         font-size: 1.8em;
+         text-shadow: 1px 1px 2px #fff;
+      }
+
+      p { color: #7fa1cc; font-size: 0.9em; margin-bottom: 25px; }
+
+      .input-group {
+         text-align: left;
+         margin-bottom: 18px;
+      }
+
+      label { 
+         font-weight: bold; 
+         color: #8a7cdb; 
+         display: block; 
+         font-size: 0.9em; 
+         margin-bottom: 8px;
+         padding-left: 5px;
+      }
+
+      input[type="text"] {
+         width: 100%;
+         padding: 12px 15px;
+         border: 2.5px solid #e1f0ff;
+         border-radius: 15px;
+         font-size: 1em;
+         color: #555;
+         background-color: #fcfdff;
+         box-sizing: border-box;
+         outline: none;
+         transition: all 0.3s;
+      }
+
+      input[type="text"]:focus {
+         border-color: #ffb3cd;
+         background-color: #fff;
+         box-shadow: 0 0 8px rgba(255, 179, 205, 0.4);
+      }
+
+      /* Tombol Kirim warna-warni pastel */
+      input[type="submit"] {
+         margin-top: 15px;
+         background: linear-gradient(45deg, #ff9eb5, #8cb6ff);
+         color: white;
+         border: none;
+         padding: 14px;
+         width: 100%;
+         border-radius: 15px;
+         font-size: 1.1em;
+         font-weight: bold;
+         cursor: pointer;
+         box-shadow: 0 5px 15px rgba(255, 158, 181, 0.4);
+         transition: transform 0.2s, box-shadow 0.2s;
+         font-family: 'Comic Sans MS', sans-serif;
+      }
+
+      input[type="submit"]:hover {
+         transform: scale(1.03);
+         box-shadow: 0 7px 20px rgba(255, 158, 181, 0.6);
+      }
+   </style>
 </head>
 <body>
-   <h2>Demo Text</h2>
-   
-   <form action="/" method="post">
-      Nama depan:<br />
-      <input type="text" name="namaDepan" size="25" /><br />
-      Nama belakang:<br />
-      <input type="text" name="namaBelakang" size="25" />
-      <p><input type="submit"  value="Kirim" /></p>
-   </form>
+
+   <div class="candy-box">
+      <h2>🍭 Demo Text ⭐️</h2>
+      <p>Silakan masukkan nama kamu di bawah ini!</p>
+      
+      <form action="/" method="post">
+         <div class="input-group">
+            <label>✨ Nama Depan:</label>
+            <input type="text" name="namaDepan" placeholder="Ketik di sini..." required />
+         </div>
+         <div class="input-group">
+            <label>✨ Nama Belakang:</label>
+            <input type="text" name="namaBelakang" placeholder="Ketik di sini..." required />
+         </div>
+         <input type="submit" value="Kirim Data 🚀" />
+      </form>
+   </div>
    
 </body>
 </html>
